@@ -1,0 +1,133 @@
+@import "_normalize.css";
+@import "_bg-gradient.css";
+
+@font-face {
+  font-family: "Lato-Bold";
+  src: URL("../assets/Lato-Bold.ttf") format("truetype");
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+body > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-family: "Lato-Bold", sans-serif;
+  color: #fff;
+  text-align: center;
+  line-height: 1;
+  font-size: 1.5em;
+  text-transform: lowercase;
+}
+
+.hero-img,
+img {
+  width: 150px;
+  height: 150px;
+  clip-path: polygon(
+    50% 0%,
+    90% 20%,
+    100% 60%,
+    75% 100%,
+    25% 100%,
+    0% 60%,
+    10% 20%
+  );
+  background: white;
+}
+
+img {
+  width: 142px;
+  height: 142px;
+  margin-top: 4px;
+}
+
+h1,
+p {
+  margin: 0 0 0.2em;
+}
+
+ul {
+  padding: 0.15em 0.5em 0;
+  margin: 0.5em 0;
+  list-style: none;
+  border: 4px solid white;
+  clip-path: polygon(0% 0%, 8% 50%, 0% 100%, 100% 100%, 92% 50%, 100% 0%);
+}
+
+.link {
+  color: inherit;
+  text-decoration: none;
+  text-transform: lowercase;
+  border: none;
+  margin-bottom: 0.5em;
+  padding: 0 0 0.1em;
+  width: auto;
+  overflow: visible;
+  background: transparent;
+  cursor: pointer;
+  line-height: 1;
+  display: block;
+  border: 2px solid transparent;
+  width: 7em;
+  transition: letter-spacing 0.2s ease, border 0.2s ease;
+}
+
+.link:hover {
+  letter-spacing: 1;
+}
+
+.link::after {
+  opacity: 0;
+  content: "⇨";
+  position: absolute;
+  margin: 0.38em 0.3em;
+  font-size: 0.6em;
+  transition: opacity 1s;
+}
+
+.link:hover::after {
+  opacity: 1;
+}
+
+.link:focus {
+  border: 2px solid white;
+  outline: none;
+}
+
+#pause-button {
+  position: absolute;
+  bottom: 5;
+  right: 5;
+  font-size: 0.5em;
+  color: inherit;
+  border: none;
+  width: auto;
+  overflow: visible;
+  background: transparent;
+  cursor: pointer;
+  line-height: 1;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  transition: border 0.3s ease, background-color 0.3s ease;
+}
+
+#pause-button:hover {
+  border: 2px solid rgba(255, 255, 255, 0.4);
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+#pause-button:focus {
+  border: 2px solid white;
+  outline: none;
+}
+
+@media screen and (min-width: 1000px) {
+}
+
+@media screen and (max-width: 600px) {
+}
